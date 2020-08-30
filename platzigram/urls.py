@@ -8,5 +8,5 @@ from django.urls import path, include
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('posts/', include('posts.urls'), name='posts'),
-    #path('posts/', include('posts.urls'), name='users'),
+    path('users/', include('users.urls'), name='login'),
 ] +  static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
