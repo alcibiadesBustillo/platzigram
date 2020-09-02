@@ -2,7 +2,7 @@
 # Django
 from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.decorators import login_required
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, HttpResponse
 
 # Exceptions
 from django.db.utils import IntegrityError
@@ -56,3 +56,8 @@ def logout_view(request):
     """
     logout(request)
     return redirect('login')
+
+#@login_required
+def update_profile(request):
+    return render(request, 'users/update_profile.html')
+
